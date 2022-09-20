@@ -1,7 +1,6 @@
 const express = require('express');
 
-const PORT = 8080;
-const HOST = '0.0.0.0';
+const PORT = process.env.PORT || 8080;
 
 const apple = {
     "applinks": {
@@ -38,7 +37,7 @@ const page = `
 <a href='/.well-known/assetlinks.json'>Link to google well-known links</a>
 `
 
-const  app = express();
+const app = express();
 app.get('/.well-known/apple-app-site-association', (req, res) => {
     res.json(apple)
 })
@@ -49,6 +48,7 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 
 app.get('/', (_, res) => res.send(page))
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(PORT, () =>
+    console.log(`Running on http://localhost:${PORT}`)
+);
 
