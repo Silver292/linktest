@@ -2,7 +2,7 @@ const express = require('express');
 
 const PORT = process.env.PORT || 8080;
 
-const apple = {
+const appleAccordingToDocs = {
     "applinks": {
         "details": [
             {
@@ -16,6 +16,19 @@ const apple = {
             }
         ]
 
+    }
+}
+
+const apple = {
+    "applinks": {
+        "apps": [],
+        "details": {
+            "YAP562AABL.com.fixzy.agent.app": {
+                "paths": [
+                    "*"
+                ]
+            }
+        }
     }
 }
 
