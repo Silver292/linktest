@@ -69,7 +69,7 @@ const page = `
 
 const app = express();
 app.get('/.well-known/apple-app-site-association', (req, res) => {
-    res.json(apple)
+    res.json(appleAccordingToDocs)
 })
 
 app.get('/.well-known/assetlinks.json', (req, res) => {
