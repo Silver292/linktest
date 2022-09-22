@@ -9,7 +9,7 @@ const appleAccordingToDocs = {
                 "appIDs": ["YAP562AABL.com.fixzy.agent.app"],
                 "components": [
                     {
-                        "/": "jobs/media/*",
+                        "/": "job/media/*",
                         "comment": "Matches any URL whose path starts with /job/media"
                     },
                     {
