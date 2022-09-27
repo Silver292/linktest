@@ -60,7 +60,7 @@ const google = [
             "namespace": "android_app",
             "package_name": "com.fixzy.agent.app",
             "sha256_cert_fingerprints":
-                ["44:E0:93:C3:3B:72:DD:1A:A5:09:2F:B8:D4:06:E9:C4:38:43:7E:88:6F:66:2A:8E:EC:9B:ED:4F:E9:41:1D:38"]
+                ["3D:8E:2F:C4:07:F5:9D:FB:7B:BA:57:21:5A:54:B8:3E:4A:19:38:CA:86:DB:FC:36:C1:61:CD:42:2E:FB:2B:D3"]
         }
     }, {
         "relation": ["delegate_permission/common.handle_all_urls"],
