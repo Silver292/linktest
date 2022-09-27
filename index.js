@@ -53,15 +53,25 @@ const apple = {
     }
 }
 
-const google = [{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-        "namespace": "android_app",
-        "package_name": "com.fixzy.agent.app",
-        "sha256_cert_fingerprints":
-            ["44:E0:93:C3:3B:72:DD:1A:A5:09:2F:B8:D4:06:E9:C4:38:43:7E:88:6F:66:2A:8E:EC:9B:ED:4F:E9:41:1D:38"]
+const google = [
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.fixzy.agent.app",
+            "sha256_cert_fingerprints":
+                ["44:E0:93:C3:3B:72:DD:1A:A5:09:2F:B8:D4:06:E9:C4:38:43:7E:88:6F:66:2A:8E:EC:9B:ED:4F:E9:41:1D:38"]
+        }
+    }, {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.fixzy.consumer.app",
+            "sha256_cert_fingerprints":
+                ["AA:77:73:7A:B7:B1:75:99:60:FB:64:38:FF:FF:2A:BB:2F:A3:2E:5C:3B:09:71:2C:BA:0D:9D:04:EF:C4:81:68"]
+        }
     }
-}]
+]
 
 const page = `
 <p>Hello from test server!</p>
