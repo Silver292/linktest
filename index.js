@@ -6,7 +6,7 @@ const appleAccordingToDocs = {
     "applinks": {
         "details": [
             {
-                "appIDs": ["YAP562AABL.com.fixzy.agent.app"],
+                "appIDs": ["YAP562AABL.com.fixzy.agent.app", "YAP562AABL.com.fixzy.consumer.app"],
                 "components": [
                     {
                         "/": "job/media/*",
