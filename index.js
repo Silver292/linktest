@@ -2,54 +2,29 @@ const express = require('express');
 
 const PORT = process.env.PORT || 8080;
 
-const appleAccordingToDocs = {
+const apple = {
     "applinks": {
         "details": [
             {
-                "appIDs": ["YAP562AABL.com.fixzy.agent.app", "YAP562AABL.com.fixzy.consumer.app"],
+                "appIDs": ["YAP562AABL.com.fixzy.consumer.app"],
                 "components": [
                     {
-                        "/": "job/media/*",
-                        "comment": "Matches any URL whose path starts with /job/media"
-                    },
+                        "/": "session/*",
+                        "comment": "Matches any URL whose path starts with /call"
+                    }
+                ]
+            },
+            {
+                "appIDs": ["YAP562AABL.com.fixzy.agent.app"],
+                "components": [
                     {
-                        "/": "call/*",
+                        "/": "session/*",
                         "comment": "Matches any URL whose path starts with /call"
                     }
                 ]
             }
         ]
 
-    }
-}
-
-const apple = {
-    "activitycontinuation": {
-        "apps": [
-            "YAP562AABL.com.fixzy.agent.app"
-        ]
-    },
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appIDs": ["YAP562AABL.com.fixzy.agent.app"],
-                "components": [
-                    {
-                        "/": "/buy/*",
-                        "comment": "Matches any URL whose path starts with /buy/"
-                    },
-                    {
-                        "/": "*",
-                        "comment": "Matches any URL "
-                    }
-                ]
-            },
-            {
-                "appID": "YAP562AABL.com.fixzy.agent.app",
-                "paths": ["/buy/*", "*",]
-            }
-        ]
     }
 }
 
@@ -83,7 +58,7 @@ const page = `
 
 const app = express();
 app.get('/.well-known/apple-app-site-association', (req, res) => {
-    res.json(appleAccordingToDocs)
+    res.json(apple)
 })
 
 app.get('/.well-known/assetlinks.json', (req, res) => {
@@ -95,4 +70,3 @@ app.get('/', (_, res) => res.send(page))
 app.listen(PORT, () =>
     console.log(`Running on http://localhost:${PORT}`)
 );
-
