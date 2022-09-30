@@ -10,7 +10,7 @@ const apple = {
                 "components": [
                     {
                         "/": "session/*",
-                        "comment": "Matches any URL whose path starts with /call"
+                        "comment": "Matches any URL whose path starts with /session"
                     }
                 ]
             },
@@ -18,8 +18,8 @@ const apple = {
                 "appIDs": ["YAP562AABL.com.fixzy.agent.app"],
                 "components": [
                     {
-                        "/": "session/*",
-                        "comment": "Matches any URL whose path starts with /call"
+                        "/": "job/media/*",
+                        "comment": "Matches any URL whose path starts with /job/media"
                     }
                 ]
             }
